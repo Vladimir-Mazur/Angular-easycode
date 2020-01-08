@@ -1,0 +1,10 @@
+.my-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-photo h1 {
+  color: red;
+  font-weight: bolder;
+}
