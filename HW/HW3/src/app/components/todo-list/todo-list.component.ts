@@ -9,11 +9,11 @@ import { Todo } from 'src/app/components/interfaces/Todo';
 })
 export class TodoListComponent {
   @Input() list: Array<Todo>
-  @Output() deleteEvent = new EventEmitter<void>();
-  @Output() completeEvent = new EventEmitter<void>();
-  @Output() showAll = new EventEmitter<void>();
-  @Output() showCompleted = new EventEmitter<void>();
-  @Output() showUncompleted = new EventEmitter<void>();
+  @Output() deleteEvent = new EventEmitter<number>();
+  @Output() completeEvent = new EventEmitter<number>();
+  @Output() showAll = new EventEmitter<number>();
+  @Output() showCompleted = new EventEmitter<number>();
+  @Output() showUncompleted = new EventEmitter<number>();
 
   onDeleteItem(id: number): void {
     this.deleteEvent.emit(id)

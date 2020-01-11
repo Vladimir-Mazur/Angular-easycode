@@ -44,21 +44,13 @@ export class AppComponent {
 
   showCompleted(id: number): void {
     for (let i:number = 0; i < this.todoList.length; i++) {
-      if (this.todoList[i].isCompleted === true) {
-        this.todoList[i].isInvisible = false
-      } else {
-        this.todoList[i].isInvisible = true
-      }
+      this.todoList[i].isInvisible = !this.todoList[i].isCompleted
     }
   }
 
   showUncompleted(id: number): void {
     for (let i:number = 0; i < this.todoList.length; i++) {
-      if (this.todoList[i].isCompleted === true) {
-        this.todoList[i].isInvisible = true
-      } else {
-        this.todoList[i].isInvisible = false
-      }
+      this.todoList[i].isInvisible = this.todoList[i].isCompleted
     }
   }
 }
