@@ -13,9 +13,9 @@
   (showCompleted)="onShowCompleted($event)"
   (showUncompleted)="onShowUncompleted($event)"
   >
-    <button class="btn btn-show_all" (click)="showAll()">Показать все задачи</button>
-    <!-- <button class="btn btn-show_completed" (click)="showCompleted()">Показать завершенные задачи</button>
-    <button class="btn btn-show_uncompleted" (click)="showUncompleted()">Показать не завершенные задачи</button> -->
+    <button class="btn btn-show_all" (click)="showAll.emit()">Показать все задачи</button>
+    <button class="btn btn-show_completed" (click)="showCompleted.emit()">Показать завершенные задачи</button>
+    <button class="btn btn-show_uncompleted" (click)="showUncompleted.emit()">Показать не завершенные задачи</button>
   </div>
     <!-- <ng-template ngFor let-item [ngForOf]="list">
     </ng-template> -->
