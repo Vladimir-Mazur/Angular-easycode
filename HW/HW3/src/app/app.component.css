@@ -1,9 +1,3 @@
 .invisible {
-    position: absolute;
-    opacity: 0;
-    /* top: -100000px; */
-}
-
-app-todo-list-item {
-    position: absolute;
+    display: none;
 }

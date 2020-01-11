@@ -7,36 +7,31 @@ import { Todo } from 'src/app/components/interfaces/Todo';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent {
   @Input() list: Array<Todo>
-  @Output() deleteEvent = new EventEmitter();
-  @Output() completeEvent = new EventEmitter();
-  @Output() showAll = new EventEmitter();
-  @Output() showCompleted = new EventEmitter();
-  @Output() showUncompleted = new EventEmitter();
+  @Output() deleteEvent = new EventEmitter<void>();
+  @Output() completeEvent = new EventEmitter<void>();
+  @Output() showAll = new EventEmitter<void>();
+  @Output() showCompleted = new EventEmitter<void>();
+  @Output() showUncompleted = new EventEmitter<void>();
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onDeleteItem(id:number):void {
+  onDeleteItem(id: number): void {
     this.deleteEvent.emit(id)
   }
 
-  onCompleteItem(id:number):void {
+  onCompleteItem(id: number): void {
     this.completeEvent.emit(id)
   }
 
-  onShowAllItems(id:number):void {
+  onShowAllItems(id: number): void {
     this.showAll.emit(id)
   }
 
-  onShowCompleted(id:number):void {
+  onShowCompleted(id: number): void {
     this.showCompleted.emit(id)
   }
 
-  onShowUncompleted(id:number):void {
+  onShowUncompleted(id: number): void {
     this.showCompleted.emit(id)
   }
 }

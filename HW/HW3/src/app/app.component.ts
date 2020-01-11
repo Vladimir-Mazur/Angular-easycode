@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { Todo } from './components/interfaces/Todo';
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
       id: 1,
       title: 'Learn JavaScript',
       isCompleted: false,
-      isInvisible: true,
+      isInvisible: false,
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export class AppComponent {
   taskList: Array<Todo> = this.todoList;
   currentFilter: string = 'all';
 
-  deleteTodoItem(id: number):void {
+  deleteTodoItem(id: number): void {
     this.todoList = this.todoList.filter(item => item.id !== id);
   }
 
@@ -40,10 +40,9 @@ export class AppComponent {
     for (let i:number = 0; i < this.todoList.length; i++) {
       this.todoList[i].isInvisible = false
     }
-    private cdr:  
   }
 
-  showCompleted(id: number):void {
+  showCompleted(id: number): void {
     for (let i:number = 0; i < this.todoList.length; i++) {
       if (this.todoList[i].isCompleted === true) {
         this.todoList[i].isInvisible = false
@@ -53,9 +52,9 @@ export class AppComponent {
     }
   }
 
-  showUncompleted(id: number):void {
+  showUncompleted(id: number): void {
     for (let i:number = 0; i < this.todoList.length; i++) {
-      if (this.todoList[i].isCompleted === false) {
+      if (this.todoList[i].isCompleted === true) {
         this.todoList[i].isInvisible = true
       } else {
         this.todoList[i].isInvisible = false
