@@ -3,5 +3,7 @@ export interface Todo {
   title: string;
   isCompleted: boolean;
   isInvisible: boolean;
+  showCompletedItem?: number;
+  showUncompletedItem?: number;
   body?: string;
 }
