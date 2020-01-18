@@ -1,0 +1,19 @@
+.btn {
+    width: 30%;
+    height: 80px;
+    color: white;
+    border-radius: 50%;
+    background-color: burlywood;
+    font-weight: 500;
+}
+ 
+.btn:hover {
+    filter: grayscale(1);
+}
+
+.show-btns {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

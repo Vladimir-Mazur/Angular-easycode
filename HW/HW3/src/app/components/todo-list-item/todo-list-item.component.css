@@ -1,0 +1,17 @@
+.completed{
+  background-color: rgb(15, 180, 15);
+}
+
+.completed .btn{
+  opacity: .7;
+}
+
+.completed h5{
+  text-decoration:line-through;
+  color: grey;
+}
+
+.btn-danger:hover,
+.btn-primary:hover{
+  opacity: 0.7;
+}

@@ -1,0 +1,9 @@
+<!-- app-todo-list-filters -->
+<app-todo-list
+  [list]="todoList"
+  (deleteEvent)="deleteTodoItem($event)"
+  (completeEvent)="completeTodoItem($event)"
+  (showAll)="showAll($event)"
+  (showCompleted)="showCompleted($event)"
+  (showUncompleted)="showUncompleted($event)"
+></app-todo-list>
